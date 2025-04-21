@@ -1,0 +1,166 @@
+.gallery {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0px;
+  }
+  
+  .products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin: 0 auto;
+  }
+  
+  .image-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+  
+  .image-container img {
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  .image-text {
+    position: absolute;
+    display: flex;
+    top: 0.5rem;
+    left: 0.5rem;
+    /* transform: translate(-50%, -50%); */
+    color: white; /* Color del texto */
+    background-color: rgba(0, 0, 0); /* Fondo semitransparente para mejorar la legibilidad */
+    padding: 5px 10px; 
+    font-size: 16px;
+    text-align: left;
+    border-radius: 5px;
+    gap: 10px;
+  }
+  
+  .card-text {
+    margin: 0 auto;
+    padding: 10px 0;
+    font-size: 16px;
+    text-align: left;
+  }
+  
+  .card-text-title {
+    font-weight: bold;
+  }
+  
+  .card-text-container {
+    font-size: 14px;
+  }
+
+  .spot {
+    color: gray;
+  }
+
+  .vehicle-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-family: var(--font-primary, Roboto), sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+  
+  .row {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    /* align-items: flex-end; */
+
+    /* padding: 8px 12px; */
+    gap: 20px;
+    /* border-bottom: 1px solid #ddd; */
+  }
+  
+  .label {
+    width: 150px;
+    font-weight: bold;
+    color: var(--color-principal); 
+    text-align: left;
+    background: var(--color-light); 
+    align-items: center;
+  }
+  
+  .value {
+    width: 150px;
+    height: 30px;
+    text-align: right;
+    color: var(--color-principal); 
+    text-align: left;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: 8fr 4fr;
+    /* gap: 20px; */
+    padding: 20px 0;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    width: 95%;
+  }
+  
+  .main {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+  }
+  
+  .aside {
+    background: #eaeaea;
+    padding: 20px;
+    border-radius: 10px;
+  
+    /* Simulamos comportamiento "móvil" */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+ .aside  .products {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+  .main a img {
+    display: block;
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  .details {
+    display: block;
+    margin-left: 0;
+    margin-right: auto;
+    text-align: left;
+  }
+
+  .vehicle-commints {
+    font-size: 18px;
+    font-weight: 900;
+    padding: 20px 0 10px 0;
+  }
+
+  .disclaimer {
+    text-align: justify;
+    font-size: 12px;
+    padding: 10px 0;
+  }
+
+  p {
+    white-space: pre-line;
+  }
+  
+ 
+  @media only screen and (max-width: 800px) {
+    .products {
+      grid-template-columns: 1fr;
+    }
+  }
+  

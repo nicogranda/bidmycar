@@ -1,0 +1,209 @@
+
+  /* h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #F15A24;
+    text-align: center;
+    margin-bottom: 30px;
+  } */
+  
+  /* Contenedor principal */
+  .form-container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilo para cada campo del formulario */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  textarea,
+  .Select__control {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  .form-container button {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .form-container button:hover {
+    background-color: #e14a1b;
+    color: #FFF;
+  }
+  
+  .upload-button {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .radio-group {
+    display: flex;
+    gap: 20px; /* espacio entre opciones */
+  }
+  
+  .radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  /* Estilos para la selección de marca (react-select) */
+  .Select__control {
+    border-color: #ccc !important;
+  }
+  
+  .Select__control--is-focused {
+    border-color: #F15A24 !important;
+  }
+  
+  .Select__placeholder {
+    color: #aaa;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+  }
+  
+  .form-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .dropzone-container {
+    margin: 1rem 0;
+  }
+  
+  .dropzone {
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: border-color 0.3s;
+  }
+  
+  .dropzone:hover {
+    border-color: var(--color-primary);
+  }
+  
+  .preview-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 1rem;
+  }
+  
+  .preview-item {
+    position: relative;
+    width: 120px;
+    height: 80px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+  }
+  
+  .preview-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .photo-label {
+    position: absolute;
+    bottom: 2px;
+    left: 4px;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    font-size: 0.7rem;
+    padding: 2px 4px;
+    border-radius: 3px;
+  }
+  
+  .zip-info-container {
+    min-height: 30px; /* o más si quieres más espacio reservado */
+    /* margin-top: 8px; */
+    /* transition: all 0.3s ease; */
+    font-size: 14px;
+    color: gray;
+  }
+  
+  .zip-info,
+  .zip-info-placeholder {
+    padding: 0px;
+    /* border-radius: 8px; */
+    font-size: 10px;
+    color: gray;
+  }
+  
+  .suggestions {
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 999;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .suggestions li {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .suggestions li:hover {
+    background-color: #f2f2f2;
+  }
+  .checkbox-with-gap {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  
