@@ -1,0 +1,56 @@
+/* AboutPage.css */
+
+.about-container {
+  max-width: 900px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  text-align: left; /* fuerza todos los textos internos a la izquierda */
+  padding: 20px 0;
+}
+
+.about-container h1,
+.about-container h2,
+.about-container h3 {
+  display: block;
+}
+
+.about-container h1 {
+  text-align: center;
+}
+
+.about-container h3,
+.about-container p,
+.about-container ul,
+.about-container ol {
+  text-align: left; /* refuerzo extra */
+}
+
+/* Estilos existentes */
+.about-container h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about-container h2 {
+  text-align: left; 
+  font-size: 1.5rem;
+  margin-top: 30px;  /* espacio superior */
+  margin-bottom: 10px; /* opcional, espacio inferior */
+  color: var(--color-primary);
+  padding: 0; /* aseguramos que no haya padding que interfiera */
+}
+
+
+.about-container h3 {
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.about-container ul,
+.about-container ol {
+  padding-left: 1.5rem;
+}
+
+.color-principal {
+  color: var(--color-secondary);
+}

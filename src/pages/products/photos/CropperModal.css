@@ -1,0 +1,16 @@
+.photo-uploader-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.photo-upload-button {
+  flex: 0 1 150px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.photo-upload-button img {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}

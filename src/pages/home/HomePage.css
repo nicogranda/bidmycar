@@ -1,0 +1,17 @@
+.mobile-stack {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Mostrar Filter en móvil */
+  .mobile-stack > .filter-wrapper {
+    display: block;
+  }
+  
+  /* En desktop ocultar el Filter */
+  @media (min-width: 769px) {
+    .mobile-stack > .filter-wrapper {
+      display: none;
+    }
+  }
+  

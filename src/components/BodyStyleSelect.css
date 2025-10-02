@@ -1,0 +1,61 @@
+.body-style-wrapper {
+  max-width: 300px;
+  margin: auto;
+}
+
+.body-style-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4px;
+}
+
+.radio-card {
+  width: 100%;
+  aspect-ratio: 1.6;
+  box-sizing: border-box;
+  border-radius: 6px;
+  padding: 6px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: #333;
+}
+
+.radio-card input {
+  display: none;
+}
+
+.radio-card img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  margin-bottom: 4px;
+}
+
+.radio-card label {
+  font-size: 13px;
+  cursor: pointer;
+  line-height: 1.2;
+}
+
+.radio-card.selected {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.radio-card.selected label {
+  color: white;
+  font-weight: 600;
+}
+
+.error-message {
+  color: red;
+  margin-top: 6px;
+  font-size: 13px;
+  text-align: center;
+}

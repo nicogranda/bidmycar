@@ -1,60 +1,40 @@
 import React from 'react';
 import { GoogleLogin } from '@react-oauth/google';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { getConfig } from '../../config/env';
 
 function LoginGoogle() {
   const navigate = useNavigate();
+  const location = useLocation();
+  const { apiUrl } = getConfig();
+
+  const redirectPath = location.state?.redirectTo || '/';
 
   return (
     <div style={{ display: 'flex', justifyContent: 'center', padding: '2rem' }}>
       <GoogleLogin
         onSuccess={credentialResponse => {
-          console.log('Google credential:', credentialResponse);
-          fetch('http://localhost:8888/bidmycar/backend/api/google-login.php', {
+          fetch(`${apiUrl}/api/login-google.php`, {
             method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-              credential: credentialResponse.credential,
-            }),
-          })
-            .then(res => res.json())  // Aquí esperamos la respuesta del backend
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ credential: credentialResponse.credential }),
+            credentials: 'include' // <<--- 🔥 clave mágica
+          })          
+            .then(res => res.json())
             .then(data => {
-              console.log("Respuesta del backend:", data);
               if (data.success) {
-                localStorage.setItem('userName', data.user.name); // <-- Guardamos el nombre
-                // 🔥 Emitir evento personalizado para que Header se actualice
+                localStorage.setItem('userName', data.user.name);
+                localStorage.setItem('user_id', data.user.id);
+                console.log("el user_id", data.user_id);
                 window.dispatchEvent(new Event('userLogin'));
-                //navigate('/');
-                const redirectPath = localStorage.getItem('redirectAfterLogin') || '/';
-                localStorage.removeItem('redirectAfterLogin');
-            
                 navigate(redirectPath);
               } else {
-                alert('Login fallido, por favor intente de nuevo.');
+                alert('Login fallido, intente nuevamente.');
               }
             })
-            
-            // .then(data => {
-            //   //
-            //   if (data.success) {
-            //     // Si la respuesta es exitosa, redirigimos a la página de sign-up
-            //     navigate('/');
-            //   } else {
-            //     // Si hay un error en el login, mostramos una alerta
-            //     alert('Login fallido, por favor intente de nuevo.');
-            //   }
-            // })
-            // //
-            .catch(error => {
-              console.error('Error en la autenticación de Google:', error);
-              alert('Hubo un problema al intentar iniciar sesión. Por favor, intente nuevamente.');
-            });
+            .catch(() => alert('Error en la autenticación.'));
         }}
-        onError={() => {
-          console.log('Login con Google fallido');
-        }}
+        onError={() => console.log('Login con Google fallido')}
       />
     </div>
   );

@@ -1,0 +1,54 @@
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* oscurece el fondo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.modal-content {
+  background: var(--modal-bg, #fff); /* blanco por defecto, configurable con clase */
+  padding: 1.5rem;
+  border-radius: 12px;
+  max-width: 1000px;
+  width: 100%;
+  max-height: 90%;
+  overflow-y: auto;
+  display: grid;
+  gap: 1rem; /* antes era más grande, ahora más compacto */
+  grid-template-columns: 1fr;
+  position: relative;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.modal-content.dark {
+  --modal-bg: #111; /* fondo negro si quieres aplicarlo */
+  color: white;
+}
+
+.close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.close-button:hover {
+  background: #333;
+}

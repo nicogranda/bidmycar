@@ -1,0 +1,32 @@
+.billboard {
+  display: flex;
+  align-items: center;       /* centra verticalmente */
+  justify-content: center;   /* centra horizontalmente */
+  gap: 15px;                 /* espacio entre elementos */
+  height: 50px;
+  width: 100%;
+  background-color: black;   /* o var(--color-primary) */
+  color: #FFF;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.billboard a {
+  color: white;
+  text-decoration: none;
+}
+
+.billboard a:hover,
+.billboard a:active,
+.billboard a:visited {
+  color: white;
+}
+
+.billboard *,
+.billboard *:before,
+.billboard *:after {
+  font-size: inherit;
+  line-height: 1.4;
+}

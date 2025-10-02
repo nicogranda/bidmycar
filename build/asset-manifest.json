@@ -1,23 +1,15 @@
 {
   "files": {
-    "main.css": "/bidmycar/static/css/main.bc2f05bc.css",
-    "main.js": "/bidmycar/static/js/main.f043d45c.js",
-    "static/js/453.483b3532.chunk.js": "/bidmycar/static/js/453.483b3532.chunk.js",
-    "static/media/slide3.jpg": "/bidmycar/static/media/slide3.0b2292ade030274317f4.jpg",
-    "static/media/slide2.jpg": "/bidmycar/static/media/slide2.6120e6eb0dea2a7448bf.jpg",
-    "static/media/box4.jpg": "/bidmycar/static/media/box4.28d044d2e1b680380799.jpg",
-    "static/media/slide1.jpg": "/bidmycar/static/media/slide1.6402cd440255e8e31e97.jpg",
-    "static/media/box2.jpg": "/bidmycar/static/media/box2.172b9f8fcd0cc6a9fe85.jpg",
-    "static/media/box3.jpg": "/bidmycar/static/media/box3.2706093eb778b02777a9.jpg",
-    "static/media/box1.jpg": "/bidmycar/static/media/box1.e863a2337df3c78e9b55.jpg",
-    "static/media/box21.jpg": "/bidmycar/static/media/box21.9bd1cfd14e1fa996e452.jpg",
-    "index.html": "/bidmycar/index.html",
-    "main.bc2f05bc.css.map": "/bidmycar/static/css/main.bc2f05bc.css.map",
-    "main.f043d45c.js.map": "/bidmycar/static/js/main.f043d45c.js.map",
-    "453.483b3532.chunk.js.map": "/bidmycar/static/js/453.483b3532.chunk.js.map"
+    "main.css": "/static/css/main.18517c4c.css",
+    "main.js": "/static/js/main.5affe6d0.js",
+    "static/js/453.483b3532.chunk.js": "/static/js/453.483b3532.chunk.js",
+    "index.html": "/index.html",
+    "main.18517c4c.css.map": "/static/css/main.18517c4c.css.map",
+    "main.5affe6d0.js.map": "/static/js/main.5affe6d0.js.map",
+    "453.483b3532.chunk.js.map": "/static/js/453.483b3532.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bc2f05bc.css",
-    "static/js/main.f043d45c.js"
+    "static/css/main.18517c4c.css",
+    "static/js/main.5affe6d0.js"
   ]
 }

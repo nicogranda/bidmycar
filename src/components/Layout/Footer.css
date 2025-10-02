@@ -1,0 +1,102 @@
+footer {
+  width: 100%;
+  min-height: 40vh; /* solo si quieres una altura mínima */
+  background-color: var(--color-secondary);
+}
+
+
+.footer-container-info {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.footer-info {
+  grid-column: span 1;
+  text-align: left;
+}
+.footer-info ul li a {
+  text-decoration: none;
+  color:white;
+}
+
+.footer-title-info {
+  padding: 10px 0;
+  color: white;
+  font-weight: 600;
+}
+.footer-text-color {
+   
+    color: white;
+    font-family: var(--font-principal, sans-serif);
+    padding: 2rem 1rem;
+    position: relative;
+  }
+  
+  .footer-rrss {
+      grid-column: span 1;
+      display: flex;
+      padding: 10px 0;
+      /* flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: bottom;
+      align-content: stretch; */
+      gap: 20px;
+  }
+  
+  .footer-rrss a i {
+    color: white;
+  }
+
+  .footer-rrss a:hover i {
+    color: var(--color-primary);
+  }
+  
+  .footer-info ul.no-bullets li {
+    line-height: 1.5;
+  }
+  
+  
+  .no-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+  }
+
+  .copyright {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .developer {
+    color: white;
+    text-align: left; /* Alinea el contenido a la izquierda */
+    margin-left: 20px; /* Si deseas agregar un margen a la izquierda */
+  }
+  
+
+  .footer-container-info {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    padding-left: 1rem;  /* <-- nuevo: margen común a la izquierda */
+    padding-right: 1rem; /* <-- opcional: margen común a la derecha */
+  }
+  
+  .footer-info {
+    margin: 0;           /* <-- resetea márgenes */
+    padding: 0;          /* <-- resetea padding */
+  }
+  
+  @media (max-width: 768px) {
+    .footer-container-info {
+      grid-template-columns: 1fr;
+    }
+  
+    .footer-info,
+    .footer-rrss {
+      text-align: left;
+      margin-bottom: 1rem;
+    }
+  }
+  

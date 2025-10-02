@@ -1,0 +1,331 @@
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin: 0 auto;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.image-container img {
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.image-text {
+  position: absolute;
+  display: flex;
+  top: 0.5rem;
+  left: 0.5rem;
+  color: white;
+  background-color: rgba(0, 0, 0);
+  padding: 5px 5px;
+  font-size: 14px;
+  text-align: left;
+  border-radius: 5px;
+  gap: 10px;
+}
+
+.card-text {
+  margin: 0 auto;
+  padding: 10px 0;
+  font-size: 16px;
+  text-align: left;
+}
+
+.card-text-title {
+  font-weight: bold;
+}
+
+.card-text-container {
+  font-size: 14px;
+}
+
+.spot {
+  color: gray;
+}
+
+.vehicle-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-family: var(--font-primary, Roboto), sans-serif;
+  margin: 0 auto;
+  padding: 20px 70px;
+}
+
+/* .aside {
+  background: #eaeaea;
+  padding: 20px 0;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-size: 10px;
+} */
+
+.product-sheet {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.product-sheet .row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+  margin-bottom: 5px;
+  flex: 1 1 calc(50% - 10px); /* Dos columnas con espacio entre ellas en desktop */
+}
+
+.label {
+  width: 150px;
+  font-weight: bold;
+  color: var(--color-principal);
+  background: var(--color-light);
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+.value {
+  flex: 1;
+  height: 30px;
+  color: var(--color-principal);
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+/* Grid principal: main + aside */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 0.70fr; /* main 75%, aside 25% aprox */
+  gap: 20px;
+  padding: 0px;
+}
+
+/* Contenedor aside */
+.aside {
+   /* limitar ancho del aside */
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* gap: 10px; */
+  background: #eaeaea;
+  border-radius: 10px;
+  font-size: 10px;
+}
+
+/* Productos dentro del aside en 2 columnas */
+.aside .products {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  width: 100%;
+  font-size: 8px;
+}
+
+/* Opcional: ajustar imágenes para que no rompan las columnas */
+.aside .products .image-container img {
+  width: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.main a img {
+  display: block;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.details {
+  display: block;
+  margin-left: 0;
+  margin-right: auto;
+  text-align: left;
+}
+
+.vehicle-commints {
+  font-size: 18px;
+  font-weight: 900;
+  padding: 20px 0 10px 0;
+}
+
+.disclaimer {
+  text-align: justify;
+  font-size: 12px;
+  padding: 10px 0;
+}
+
+p {
+  white-space: pre-line;
+}
+
+.top-section {
+  width: 100%;
+  /* margin-bottom: 2rem; */
+  padding: 0;
+}
+
+.billboard-and-verification {
+  display: flex;
+  align-items: stretch; /* 🔥 Estira ambas alturas */
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.billboard-wrapper {
+  flex: 1 1 65%;
+  display: flex;
+  align-items: stretch;
+}
+
+.billboard-login-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* espacio entre billboard y botón */
+  flex-wrap: wrap; /* en móviles se puede quebrar */
+}
+
+.billboard-login-row .billboard-wrapper {
+  flex: 1 1 65%; /* ocupa 65% del ancho disponible */
+}
+
+.billboard-login-row .btn-verify {
+  flex: 0 0 auto; /* el botón mantiene su tamaño */
+  height: 50px;
+  padding: 0 20px;
+}
+
+
+/* Estilos comunes para botones */
+.buy-btn,
+.btn-verify {
+  /* padding: 10px 20px; */
+  height: 50px;
+  background-color: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.buy-btn[disabled] {
+  background-color: gray;
+  cursor: not-allowed;
+}
+
+/* +++++ */
+.carfax-verification {
+  width: 100%;
+}
+
+.carfax-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  text-decoration: none;
+  width: 100%;
+  flex-wrap: nowrap;
+}
+
+.carfax-info {
+  flex: 1;
+  font-size: 14px;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  color: #333;
+  text-align: left;
+  margin: 0; /* 🔥 elimina posibles márgenes que empujan hacia abajo */
+}
+
+.carfax-img {
+  width: 150px;
+  height: auto;
+  flex-shrink: 0;
+  display: block;
+  object-fit: contain;
+}
+
+input[type="date"] {
+  width: 100%;
+  margin: 20px 0;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+
+/* 💡 MOBILE RESPONSIVE - max-width: 800px */
+@media only screen and (max-width: 800px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+
+  .vehicle-details {
+    padding: 10px;
+  }
+
+  .products {
+    grid-template-columns: 1fr;
+  }
+
+  .aside {
+    display: none;
+  }
+
+  .aside .products {
+    display: none;
+  }
+  
+  .form-container {
+    width: 95vw;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: #f7f7f7;
+  }
+
+  .form-container input,
+  .form-container select,
+  .form-container textarea,
+  .form-container button {
+    width: 95%;
+    max-width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+
+  .product-sheet .row {
+    flex: 1 1 100%; /* Una columna en móvil */
+  }
+}
+
+/* 🔒 Prevención de scroll horizontal */
+/* body,
+html {
+  overflow-x: hidden;
+} */

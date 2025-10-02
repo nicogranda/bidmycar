@@ -1,0 +1,202 @@
+  header {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: var(--header-height);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+  }
+  
+
+  .header-inner {
+    width: 100%;
+    /* max-width: 1200px; */
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    font-weight: bold;
+    font-size: 1.6rem;
+    color: var(--color-principal);
+    text-decoration: none;
+  }
+
+  .logo .primary {
+    color: var(--color-primary);
+  }
+  
+  .logo .secondary {
+    color: var(--color-secondary);
+  }
+  
+  nav {
+    display: flex;
+    align-items: center; /* Alinea verticalmente */
+    gap: 1rem;
+    height: 100%;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 1rem;
+    white-space: nowrap;
+    padding: 0.2rem 0.8rem;
+    display: flex;
+    align-items: center;
+    height: 100%; /* Ocupa toda la altura del nav para centrar */
+  }
+  
+  .sell-btn {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 0.8rem 0.8rem; /* Más compacto */
+    border-radius: 5px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
+    height: auto;
+  }
+  
+  .sell-btn:hover {
+    background-color: var(--color-secondary);
+  }
+  
+  
+
+  .search-signup {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .search-bar {
+    padding: 0.4rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+    width: 150px;
+  }
+
+  .signup-btn a{
+    background-color: var(--color-primary);
+    color: white;
+    text-decoration: none;
+    border: none;
+    font-size: 14px;
+    border-radius: 5px;
+    font-weight: bold;
+    width: max-content; /* Cambia a max-content si quieres que se ajuste al texto */
+    white-space: nowrap; /* Impide que el texto se divida en dos líneas */
+    padding: 0.8rem 1rem; /* Puedes ajustar el padding según el diseño */
+  }
+
+  .signup-btn a:active,
+  .signup-btn a:focus {
+    color: white;
+  }
+
+  .logout-btn {
+    background-color: var(-color-primary); /* Color que ya usas */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px;
+  }
+  
+  .logout-btn:hover {
+    background-color: var(-color-primary);
+  }
+  
+  .user-welcome {
+    display: flex;
+    align-items: center;
+  }
+  
+  .burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+  }
+
+  .burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+  }
+
+  .mobile-nav {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    background: white;
+    padding: 1rem;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  /* General */
+  .buy-btn {
+    padding: 10px 20px;
+    background-color: var(--color-primary);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+  }
+  
+  @media (max-width: 768px) {
+    nav {
+      display: none;
+    }
+
+    .burger {
+      display: flex;
+    }
+
+    .mobile-nav.show {
+      display: flex;
+    }
+
+    .search-bar {
+      width: 100px;
+    }
+  }
+
+  /* Ocultar filtro desktop en móvil */
+.header-filters-desktop {
+  display: block;
+}
+
+.header-filters-mobile {
+  display: none;
+}
+
+/* En móvil, invertir */
+@media (max-width: 768px) {
+  .header-filters-desktop {
+    display: none;
+  }
+
+  .header-filters-mobile {
+    display: block;
+    padding: 0 1rem;
+    /* organiza los filtros en dos líneas según quieras */
+  }
+}

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-const YearSelect = ({ value, onChange, name = 'year', id = 'year', required = false }) => {
+const YearSelect = ({ value, onChange, name = 'year', id = 'year', required = false, showError }) => {
   const [yearOptions, setYearOptions] = useState([]);
 
   useEffect(() => {
@@ -14,19 +14,19 @@ const YearSelect = ({ value, onChange, name = 'year', id = 'year', required = fa
 
   return (
     <div className="form-group">
-      {/* <label htmlFor={id}></label> */}
       <select 
         id={id}
         name={name}
         value={value}
         onChange={onChange}
-        required={required}
+        // required={required}
       >
         <option value="">Año</option>
         {yearOptions.map((year) => (
           <option key={year} value={year}>{year}</option>
         ))}
       </select>
+      {showError && !value && <div className="error-message">Por favor, selecciona un año.</div>}
     </div>
   );
 };

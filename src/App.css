@@ -1,3 +1,22 @@
+:root {
+  --color-primary:  #499BCC;
+  --color-secondary: #146598;
+  --color-tertiary: #5C9CC6;
+  --color-light: #DBD9DA;
+  /* #D4ECF9; */
+  --font-primary: Roboto, sans-serif;
+  --header-height: 10vh;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;  /* 👈 mucho más seguro */
+}  
+
+h1, h2, h3 {
+  all: unset;
+}
+
 .App {
   text-align: center;
 }
@@ -26,6 +45,39 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.container {
+  display: block;
+  width: 90%;
+  max-width: 1920px;         /* límite ancho en pantallas grandes */
+  margin: 0 auto;            /* centrado horizontal */
+  padding-top: var(--header-height); /* espacio debajo del header fijo */
+  min-height: calc(100vh - var(--header-height) - 60px); 
+  /* 60px = alto aproximado del footer, ajústalo a tu caso */
+}
+
+
+.mic-btn {
+  background: transparent;   /* sin círculo */
+  border: none;
+  color: var(--color-primary); /* color azul */
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-left: auto;          /* se pega a la derecha */
+  padding: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mic-btn:hover {
+  color: var(--color-secondary);
+}
+
+/* Estado de grabación */
+.mic-btn.listening {
+  color: red;
 }
 
 @keyframes App-logo-spin {

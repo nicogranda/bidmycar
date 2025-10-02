@@ -1,0 +1,7 @@
+# public/.htaccess
+
+RewriteEngine On
+
+# Si es una ruta tipo /car/123
+RewriteCond %{REQUEST_URI} ^/car/([0-9]+)$
+RewriteRule ^(.*)$ seo-wrapper.php?id=%1 [L]

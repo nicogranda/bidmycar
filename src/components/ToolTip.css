@@ -1,0 +1,37 @@
+/* Tooltip.css */
+.tooltip-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+  margin-bottom: 20px; /* Igual que .form-group */
+}
+
+    
+  .tooltip-container input {
+    width: 100%; /* hereda el estilo correcto */
+  }
+  
+  .tooltip-text {
+    visibility: hidden;
+    background-color: var(--color-primary);
+    color: #fff;
+    font-size: 12px;
+    padding: 6px 8px;
+    border-radius: 4px;
+    position: absolute;
+    z-index: 10;
+    bottom: 125%;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    white-space: pre-line;
+    max-width: 250px;
+  }
+  
+  .tooltip-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+  }
+  
