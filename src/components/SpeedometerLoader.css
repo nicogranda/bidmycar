@@ -1,0 +1,30 @@
+.speedometer-overlay {
+  position: fixed;
+  inset: 0; /* top:0; right:0; bottom:0; left:0; */
+  display: grid;
+  place-items: center;
+  background: rgba(0, 0, 0, 0.3); /* opcional, para efecto modal */
+  z-index: 9999; /* encima de todo */
+}
+
+.speedometer-svg {
+  width: 360px;
+  height: 360px;
+}
+
+.speedometer-arc {
+  fill: none;
+  stroke: #ddd;
+  stroke-width: 12;
+}
+
+.speedometer-needle {
+  stroke: var(--color-primary);
+  stroke-width: 6;
+  stroke-linecap: round;
+  transition: transform 0.05s linear;
+}
+
+.speedometer-center {
+  fill: var(--color-primary);
+}

@@ -1,0 +1,28 @@
+.mic-btn {
+  color: var(--color-primary); /* color por defecto del icono */
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right; /* lo coloca a la derecha */
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end; /* ícono a la derecha */
+  font-size: 16px;
+  transition: color 0.2s, background-color 0.2s;
+  background: none; /* elimina el background heredado */
+}
+
+.mic-btn:hover {
+  background-color: transparent !important;
+  color: var(--color-secondary) !important;
+}
+
+.mic-btn i {
+  pointer-events: none; /* evita que el icono interfiera con el click */
+}
+
+.mic-btn.active {
+  color: red; /* ícono rojo mientras graba */
+  background: none; /* mantiene fondo transparente */
+}

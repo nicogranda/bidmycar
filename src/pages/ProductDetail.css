@@ -1,0 +1,320 @@
+.product-detail-layout {
+  display: grid;
+  grid-template-columns: 1fr 32.5%;
+  gap: 2rem;              /* separación real entre main y aside */
+  width: 100%;
+  box-sizing: border-box;
+
+}
+
+.product-detail {
+  min-width: 0;   
+  width: 100%;       
+}
+
+.product-aside {
+  min-width: 0;
+}
+
+.billboard-chat-auction {
+  display: flex;
+  flex-direction: row;  /* fila */
+  flex-wrap: nowrap;    /* evita que los hijos salten a otra línea */
+  justify-content: space-between;
+  align-items: stretch; /* todos los hijos con misma altura */
+  gap: 1rem;
+  padding: 10px 0;
+  margin: 10px 0 0 0;
+}
+
+.billboard-chat-auction > div {
+  flex-basis: 0;   /* ignora tamaño intrínseco */
+  flex-grow: 1;    /* reparte según proporción */
+  flex-shrink: 1;  /* permite encoger si hace falta */
+  min-width: 0;    /* permite que se encoja */
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+}
+
+/* Reasignar proporciones */
+.billboard-chat-auction > .billboard {
+  flex-grow: 6;
+  background-color: black;
+  color: #fff;
+  border-radius: 8px;
+
+  display: flex;            /* contenedor flexible */
+  flex-direction: row;      /* hijos en línea horizontal */
+  flex-wrap: nowrap;        /* no saltan a otra línea */
+  align-items: center;      /* centra verticalmente */
+ 
+
+  padding: 0 1rem;
+  min-width: 0;
+  box-sizing: border-box;
+ 
+}
+
+/* 🔹 hijos internos de billboard en horizontal */
+.billboard-chat-auction > .billboard > * {
+  display: inline-flex;      /* fuerza a estar en línea */
+  flex: 0 0 auto;            /* tamaño natural, no se encoge ni crece */
+  margin-right: 1rem;        /* separación entre ellos */
+  align-items: center;       /* centra verticalmente cada hijo */
+}
+
+/* opcional: eliminar margen del último hijo */
+.billboard-chat-auction > .billboard > *:last-child {
+  margin-right: 0;
+}
+
+.billboard-chat-auction > .chat-btn { flex-grow: 1; }
+.billboard-chat-auction > .bid-btn { flex-grow: 3; }
+
+
+.carfax-verification {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.carfax-row {
+  display: flex;              /* contenedor flexible */
+  flex-direction: row;        /* hijos en línea horizontal */
+  flex-wrap: nowrap;          /* no saltan a otra línea */
+  align-items: center;        /* centra verticalmente */
+  justify-content: space-between; /* espacio entre texto e imagen */
+  text-decoration: none;      /* elimina subrayado del link */
+  width: 100%;
+  box-sizing: border-box;
+  gap: 1rem;                  /* separación opcional entre hijos */
+}
+
+.carfax-info {
+  flex: 1;                    /* ocupa el resto del espacio disponible */
+  font-size: 14px;
+  margin: 0;                  /* elimina margen por defecto de <p> */
+  color: #333;
+  border: solid 1px black;
+  border-radius: 8px;
+  padding: 30px;
+}
+
+.carfax-img {
+  flex-shrink: 0;             /* no se encoge */
+  width: 150px;               /* ancho fijo de la imagen */
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* Sheet */
+.card-text {
+  margin: 0 auto;
+  padding: 10px 0;
+  font-size: 16px;
+  text-align: left;
+}
+
+.card-text-title {
+  font-weight: bold;
+}
+
+.card-text-container {
+  font-size: 14px;
+}
+
+.spot {
+  color: gray;
+}
+
+.vehicle-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-family: var(--font-primary, Roboto), sans-serif;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.vehicle-details h3 {
+  font-weight: 800; /* más grueso */
+  text-align: center;
+}
+
+.product-sheet {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.product-sheet .row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+  margin-bottom: 5px;
+  flex: 1 1 calc(50% - 10px); /* Dos columnas con espacio entre ellas en desktop */
+}
+
+.label {
+  width: 150px;
+  font-weight: bold;
+  color: white;
+  background: var(--color-primary);
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+.value {
+  flex: 1;
+  height: 30px;
+  /* color: var(--color-principal); */
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+/* Contenedor aside */
+.aside {
+  /* limitar ancho del aside */
+ width: 100%;
+ padding: 0 5px;
+ box-sizing: border-box;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ /* gap: 10px; */
+ background: #eaeaea;
+ border-radius: 10px;
+ font-size: 10px;
+}
+
+/* Productos dentro del aside en 2 columnas */
+.aside .products {
+ display: grid;
+ grid-template-columns: repeat(2, 1fr);
+
+ width: 100%;
+ font-size: 8px;
+}
+
+/* Opcional: ajustar imágenes para que no rompan las columnas */
+.aside .products .image-container img {
+ width: 100%;
+ border-radius: 5px;
+ object-fit: cover;
+}
+
+
+/* .product-sheet .row {
+  flex: 1 1 100%; 
+} */
+
+.main a img {
+  display: block;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.details {
+  display: block;
+  margin-left: 0;
+  margin-right: auto;
+  text-align: left;
+  padding: 20px 0;
+}
+
+.history {
+  padding: 10px 0px;
+}
+
+.vehicle-commints {
+  font-size: 18px;
+  font-weight: 900;
+  padding: 30px 0 20px 0;
+  margin: 10px;
+}
+
+.chat-show-wrapper {
+  padding: 20px 0;
+}
+
+
+/* ========================
+   RESPONSIVE MOBILE
+======================== */
+@media (max-width: 768px) {
+  /* Layout principal: main arriba, aside abajo */
+  .product-detail-layout {
+    display: flex;           
+    flex-direction: column;  
+    gap: 1rem;              
+  }
+
+  .product-detail {
+    width: 100%;
+    order: 1;               
+  }
+
+  .aside {
+    width: 100%;
+    order: 2;               
+    margin-top: 1rem;
+  }
+
+  /* Billboard + Chat + Bid en horizontal y mismo alto */
+  .billboard-chat-auction {
+    display: flex;           
+    flex-direction: row;      /* fila horizontal */
+    flex-wrap: nowrap;        /* no saltan de línea */
+    justify-content: space-between; 
+    align-items: stretch;     /* hijos con mismo alto */
+    gap: 0.5rem;             
+  }
+
+  .billboard-chat-auction > div {
+    flex: 1 1 0;             /* repartir espacio entre los 3 */
+    margin-bottom: 0;        
+    display: flex;            /* para poder estirar contenido interno */
+    flex-direction: column;   /* mantener contenido dentro vertical */
+  }
+
+  .billboard-chat-auction > .billboard {
+    flex-grow: 6;            
+    padding: 0 0.5rem;       
+  }
+
+  .billboard-chat-auction > .chat-btn {
+    flex-grow: 2;
+  }
+
+  .billboard-chat-auction > .bid-btn {
+    flex-grow: 2;
+  }
+
+  /* Aseguramos que los hijos internos de billboard llenen su contenedor */
+  .billboard-chat-auction > .billboard > * {
+    margin: 0;               
+    flex: 1 1 auto;          
+    display: flex;           
+    align-items: center;     
+    justify-content: center; 
+  }
+
+  /* Carfax vertical */
+  .carfax-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .carfax-img {
+    width: 100%;
+    max-width: 200px; 
+    margin-top: 0.5rem;
+  }
+}

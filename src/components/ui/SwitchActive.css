@@ -1,0 +1,44 @@
+/* SwitchActive.css */
+.custom-switch-container {
+  width: 48px;
+  height: 24px;
+  background-color: #ccc;
+  border-radius: 50px;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s ease;
+  padding: 2px;
+}
+
+.custom-switch-container.inactive {
+  background-color: #e74c3c; /* Rojo */
+}
+
+.custom-switch-container.active {
+  background-color: #2ecc71; /* Verde */
+}
+
+
+.custom-switch-knob {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Movimiento visual */
+.custom-switch-container.active .custom-switch-knob {
+  transform: translateX(24px) !important;
+  -webkit-transform: translateX(24px) !important; /* Compatibilidad 2026 */
+}
+
+
+.custom-switch-container.loading {
+  opacity: 0.6;
+  cursor: wait;
+}

@@ -1,0 +1,64 @@
+/* .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+  }
+  
+  .modal-content {
+    background: white;
+    color: black;
+    padding: 20px;
+    width: 350px;
+    border-radius: 10px;
+
+  }
+   */
+
+   .chat-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+  }
+  
+  .chat-modal__content {
+    background: white;
+    color: black;
+    padding: 20px;
+    width: 350px;
+    border-radius: 10px;
+  }
+  
+  .chat-modal__close {
+    cursor: pointer;
+    float: right;
+    font-size: 20px;
+  }
+  
+  .chat-modal__messages {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    
+  }
+
+  .chat-modal__send {
+    margin-top: 20px;
+  }
+  /*  */
+
+  
+  

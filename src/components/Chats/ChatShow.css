@@ -1,0 +1,68 @@
+/* Contenedor del chat */
+.chat-show-container {
+  display: flex;
+  flex-direction: column;
+  max-height: 400px;
+  border: none;           /* quitar todos los bordes */
+  border-bottom: 2px solid #ccc; /* opcional: solo borde inferior */
+  background-color: var(--color-light);
+}
+
+/* Título fijo */
+.chat-title {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background-color: var(--color-light); 
+  padding: 8px 0;
+  font-weight: 600;
+}
+
+/* Scroll solo en el wrapper de la tabla */
+.chat-scroll-wrapper {
+  overflow-y: auto;
+  flex: 1;
+  background-color: var(--color-light); /* mismo fondo para el scroll */
+  padding: 0 8px;            /* opcional: separación lateral */
+}
+
+/* Tabla del chat */
+.chat-show-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+}
+
+.chat-show-table th,
+.chat-show-table td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd; /* solo líneas entre filas */
+}
+
+/* Cabecera sticky */
+.chat-show-header th {
+  position: sticky;
+  top: 0;
+  background-color: #f5f7fa; /* mismo color que contenedor */
+  z-index: 10;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Mensajes truncados / expandibles */
+.chat-message {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  max-width: 600px;
+  cursor: pointer;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;       /* mostrar solo 2 líneas */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.chat-message.expanded {
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}

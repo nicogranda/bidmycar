@@ -1,0 +1,30 @@
+.product-tabs-view {
+  margin: 20px;
+}
+
+.tabs-header {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tabs-header button {
+  padding: 8px 16px;
+  border: none;
+  background: #ddd;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.tabs-header button.active {
+  background: var(--color-primary);
+  color: white;
+}
+
+.tabs-body {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 4px;
+  min-height: 100px;
+}

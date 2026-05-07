@@ -1,0 +1,186 @@
+.gallery {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 0px;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin: 0 auto;
+}
+
+.image-container {
+  position: relative; /* imprescindible para que .poster y estrella funcionen */
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  background: #eee;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Esto asegura que la imagen cubra todo el contenedor */
+  object-position: center; /* Centra la imagen si se recorta */
+}
+
+.poster {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute; /* sobre la imagen */
+  top: 0.5rem;
+  left: 0.5rem;
+  right: 0.5rem;
+  z-index: 2;
+}
+
+.image-text {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 6px;
+  background-color: rgba(0,0,0,0.7);
+  color: white;
+}
+
+.image-text.urgent {
+  background-color: red !important;
+}
+
+.image-text.finished {
+  background-color: var(--color-primary) !important;
+}
+
+.highlight-star {
+  font-size: 1.3rem;
+  color: gold;
+  line-height: 1;
+}
+
+
+
+/* .image-text {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0.5rem;
+  left: 0.5rem;
+  right: 0.5rem; 
+  color: white;
+  padding: 4px 8px;
+  font-size: clamp(0.7rem, 1.5vw, 1rem);
+  border-radius: 5px;
+  gap: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+.highlight-star {
+  margin-left: auto;
+  font-size: 1.2em;
+}
+
+
+.image-text.urgent {
+  background-color: red !important;
+}
+
+.image-text.finished {
+  background-color: var(--color-primary) !important;
+} */
+
+.card {
+  overflow: hidden;
+}
+
+.card-text {
+  /* background: white; */
+  padding: 12px;
+  z-index: 1;
+}
+
+
+.card-text-title {
+  font-weight: bold;
+  font-size: clamp(0.9rem, 1.6vw, 1.2rem);
+}
+
+.card-text-container {
+  font-size: clamp(0.75rem, 1.3vw, 1rem);
+}
+
+.spot {
+  color: gray;
+}
+
+.card-link {
+  color: black;
+  text-decoration: none;
+}
+
+/* .remaining-days {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  color: white;
+  text-align: center;
+}
+
+.bg-urgent {
+  background-color: red;
+}
+
+.bg-finished {
+  background-color: var(--color-primary);
+} */
+
+/* Opcional: para que el icono quede alineado centrado con el texto */
+/* .remaining-days svg {
+  vertical-align: middle;
+} */
+
+@media only screen and (max-width: 1200px) {
+  .products {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .image-text {
+    font-size: clamp(0.65rem, 2vw, 0.9rem);
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .products {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* */
+.square {
+  position: absolute;
+
+  width: 160px;     /* largo de la cinta */
+  height: 15px;     /* grosor */
+
+  background-color: var(--color-primary);
+
+  top: 20px;        /* separación desde la esquina superior */
+  left: -40px;      /* empuja para que llegue al borde */
+
+  transform: rotate(-45deg);
+
+  z-index: 20;
+  pointer-events: none;
+}
+

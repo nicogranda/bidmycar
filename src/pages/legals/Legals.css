@@ -1,0 +1,41 @@
+.legals-container {
+  max-width: 900px;
+  margin: 32px auto;
+  padding: 24px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  text-align: left; /* Todo alineado a la izquierda */
+}
+
+.legals-container h1,
+.legals-container h2,
+.legals-container h3 {
+  color: #111;
+  text-align: left;
+}
+
+.legals-container p {
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+.legals-container ul,
+.legals-container ol {
+  margin-left: 24px;
+  margin-bottom: 16px;
+}
+
+.legals-container footer {
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 24px;
+  border-top: 1px solid #eee;
+  padding-top: 12px;
+}
+
+.legals-note {
+  background: #f7f7f7;
+  padding: 12px;
+  border-left: 4px solid #ccc;
+}

@@ -1,0 +1,25 @@
+/* EditorCommandButton.css */
+.editor-toolbar {
+  --editor-icon-color: #ffff;
+  --editor-icon-hover: #fff;
+}
+
+.editor-command-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  background: transparent;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.editor-command-btn svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--editor-icon-color, #fff);
+}
+
+.editor-command-btn:hover svg {
+  fill: var(--editor-icon-hover);
+}

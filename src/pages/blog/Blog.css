@@ -1,0 +1,200 @@
+/* HERO IMAGE */
+.blog-hero {
+  grid-column: 1 / -1;
+  height: 500px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.blog-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+.title-input {
+  width: 100%;
+  font-size: 28px;
+  padding: 5px;
+  /* border: 2px solid #000; */
+  margin-bottom: 10px;
+}
+
+.toolbar {
+  display: inline-flex;   /* 👈 clave */
+  gap: 6px;
+  margin: 6px 0;
+  align-items: left;
+}
+
+
+.toolbar button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  background:var(--color-primary);
+  cursor: pointer;
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.editable {
+  border: 1px solid #ccc;
+  min-height: 120px;
+  padding: 8px;
+  text-align: justify;   
+}
+
+
+.save-btn {
+  margin-top: 15px;
+  padding: 10px 18px;
+}
+
+.icon-btn {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 1px solid #ccc;
+  background: var(--color-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.icon-btn svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+.icon-btn:hover {
+  background: #f0f0f0;
+  color: #007bff;
+}
+
+/* Bloques de control */
+.block-actions {
+  display: flex;
+  gap: 5px;             /* espacio entre botones */
+  flex-wrap: nowrap;     /* no se rompen en columnas */
+  justify-content: flex-start; /* alineado a la izquierda */
+  margin: 5px 0;
+}
+
+.block-actions button {
+  width: 60px;
+  padding: 4px 0; /* ajusta vertical */
+  font-size: 12px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: var(--color-primary);
+  cursor: pointer;
+}
+
+
+.block-actions button:hover {
+  background-color: var(--color-secondary);
+}
+
+.blog {
+  text-align: justify;
+}
+
+.blog h1,
+.blog h2,
+.blog h3,
+.blog h4,
+.blog h5,
+.blog h6 {
+  text-align: left;
+}
+
+.blog h1 {
+  font-size: 32;
+  font-weight: 500;
+  padding: 10px 0;
+
+}
+
+.blog h2 {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 2.5rem 0 0.75rem 0;
+  padding: 0;
+}
+
+#dynamicBlocks {
+  text-align: left;
+}
+
+#dynamicBlocks h1,
+#dynamicBlocks h2,
+#dynamicBlocks p,
+#dynamicBlocks ul,
+#dynamicBlocks ol {
+  text-align: left;
+}
+
+#dynamicBlocks h1,
+#dynamicBlocks h2 {
+  margin: 24px 0;
+  line-height: 1.2;
+}
+
+#dynamicBlocks h2 {
+  font-size: 1rem;
+}
+
+/*  */
+
+.slug-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6px;
+  font-size: 0.9rem;
+}
+
+.editable {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.seo-warning {
+  color: orange;
+}
+
+.seo-success {
+  color: green;
+}
+
+.seo-danger {
+  color: red;
+}
+
+/* ===== STEPS SPACING ===== */
+
+.step-section {
+  margin: 2rem 0;   /* aire arriba y abajo */
+}
+
+/* Ajustes específicos si quieres más control */
+.featured-image-step {
+  margin-top: 1.125rem;
+  margin-bottom: 1.125rem;
+}
+
+.step-continue {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
